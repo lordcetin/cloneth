@@ -1,11 +1,13 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-
-const withPWA = require('next-pwa');
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  disable: process.env.NODE_ENV === 'development',
+  register: true,
+  scope: '/app',
+  sw: 'sw.js',
+  //...
+})
 
 module.exports = withPWA({
-  pwa: {
-    dest: 'public',  // Service worker ve manifest dosyasının bu dizine yerleştirileceği yer
-    disable: process.env.NODE_ENV === 'development',  // Geliştirme ortamında devre dışı bırakmak
-  },
-  reactStrictMode: true, // React Strict mode'u etkinleştirmek
-});
+  reactStrictMode: true
+})

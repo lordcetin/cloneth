@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { useTheme } from "next-themes";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useCallback, useRef, useState } from "react";
 import { toast } from "sonner";
 import { AiOutlineLoading } from "react-icons/ai";
@@ -15,10 +15,10 @@ type Props = {};
 const Auth = (props: Props) => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const searchParams = useSearchParams();
-  const isLoginorRegister = searchParams?.get("state");
+
+
   const [variant, setVariant] = useState(
-    isLoginorRegister == "register" ? "register" : "login"
+     "register"
   );
 
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -100,7 +100,7 @@ const Auth = (props: Props) => {
           <form
             ref={formRef}
             onSubmit={
-              isLoginorRegister === "register" || variant == "register"
+              variant == "register"
                 ? handleRegister
                 : handleLogin
             }
