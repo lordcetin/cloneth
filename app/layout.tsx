@@ -4,7 +4,10 @@ import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/sonner"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { Viewport } from "next"
- 
+import { AuthProvider } from "@/context/AuthContext"
+import { ToastContainer } from "react-toastify";
+import Navbar from "@/components/Navbar"
+
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000"
@@ -224,6 +227,21 @@ export default function RootLayout({
           inter.variable,
         )}
       >
+        <AuthProvider>
+        <Navbar />
+        <ToastContainer
+        position="bottom-left"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        style={{zIndex:99999999}}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -233,6 +251,7 @@ export default function RootLayout({
           {children}
           <Toaster />
         </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   )

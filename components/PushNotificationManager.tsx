@@ -69,24 +69,25 @@ const PushNotificationManager = () => {
   }
  
   return (
-    <div>
+    <div className="flex-col flex items-center gap-4">
       <h3 className="text-3xl font-black">Push Notifications</h3>
       {subscription ? (
         <>
-          <p>You are subscribed to push notifications.</p>
-          <button onClick={unsubscribeFromPush}>Unsubscribe</button>
+          <p>Anlık bildirimlere abone oldunuz.</p>
+          <button onClick={unsubscribeFromPush} className="bg-red-500 hover:bg-red-700 transition-all px-7 py-1 rounded-md cursor-pointer">Unsubscribe</button>
           <input
             type="text"
             placeholder="Enter notification message"
+            className="border px-3 py-1 rounded-md w-80"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <button onClick={sendTestNotification}>Send Test</button>
+          <button onClick={sendTestNotification} className="bg-teal-500 hover:bg-teal-700 transition-all px-7 py-1 rounded-md cursor-pointer">Send Test</button>
         </>
       ) : (
         <>
-          <p>You are not subscribed to push notifications.</p>
-          <button onClick={subscribeToPush}>Subscribe</button>
+          <p>Anlık bildirimlere abone değilsiniz.</p>
+          <button onClick={subscribeToPush} className="bg-blue-500 hover:bg-blue-700 transition-all px-7 py-1 rounded-md cursor-pointer">Subscribe</button>
         </>
       )}
     </div>

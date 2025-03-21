@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+/* eslint-disable @typescript-eslint/no-require-imports */
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const withPWA = require('next-pwa');
 
-export default nextConfig;
+module.exports = withPWA({
+  pwa: {
+    dest: 'public',  // Service worker ve manifest dosyasının bu dizine yerleştirileceği yer
+    disable: process.env.NODE_ENV === 'development',  // Geliştirme ortamında devre dışı bırakmak
+  },
+  reactStrictMode: true, // React Strict mode'u etkinleştirmek
+});
