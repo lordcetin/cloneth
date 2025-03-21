@@ -1,1 +1,156 @@
-if(!self.define){let e,a={};const s=(s,i)=>(s=new URL(s+".js",i).href,a[s]||new Promise((a=>{if("document"in self){const e=document.createElement("script");e.src=s,e.onload=a,document.head.appendChild(e)}else e=s,importScripts(s),a()})).then((()=>{let e=a[s];if(!e)throw new Error(`Module ${s} didn’t register its module`);return e})));self.define=(i,n)=>{const c=e||("document"in self?document.currentScript.src:"")||location.href;if(a[c])return;let r={};const f=e=>s(e,c),d={module:{uri:c},exports:r,require:f};a[c]=Promise.all(i.map((e=>d[e]||f(e)))).then((e=>(n(...e),r)))}}define(["./workbox-4754cb34"],(function(e){"use strict";importScripts(),self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/_next/app-build-manifest.json",revision:"95e1adf96e377baa08fd2b3ffa71dc02"},{url:"/_next/static/LxmdgxqfzrmJM6vz6dp9W/_buildManifest.js",revision:"ba4dcf24b552493d06a772b2cb898dbe"},{url:"/_next/static/LxmdgxqfzrmJM6vz6dp9W/_ssgManifest.js",revision:"b6652df95db52feb4daf4eca35380933"},{url:"/_next/static/chunks/341.2903e54d3da731c1.js",revision:"2903e54d3da731c1"},{url:"/_next/static/chunks/386-f221a9148f1fbef6.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/464-fa54c2978af1e7bb.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/472.a3826d29d6854395.js",revision:"a3826d29d6854395"},{url:"/_next/static/chunks/479ba886-f3370af8815de9ef.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/4bd1b696-723a138ffcc72238.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/684-78854af6cf3726e8.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/721-0460cbfc555af990.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/766-e92d725ddf9ff68c.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/795d4814-2f20ecec9ff648b1.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/app/_not-found/page-c0b5fa9715fb144f.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/app/auth/page-09d9fd846b3f87a1.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/app/dashboard/page-f8f7fe37fa7f05e7.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/app/layout-6b8721a26505978f.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/app/login/page-84c9ff671f7f58e3.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/app/manifest.webmanifest/route-e55362ab5032d06c.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/app/page-e1a79e5cefd479f8.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/framework-859199dea06580b0.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/main-app-a31501804b11cf1e.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/main-ba7383c8f92b50a9.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/pages/_app-a66f9296699c5863.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/pages/_error-7688f4c9a69e67c8.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/chunks/polyfills-42372ed130431b0a.js",revision:"846118c33b2c0e922d7b3a7676f81f6f"},{url:"/_next/static/chunks/webpack-e1e2ae5dfb49081e.js",revision:"LxmdgxqfzrmJM6vz6dp9W"},{url:"/_next/static/css/a272bbd04bb27419.css",revision:"a272bbd04bb27419"},{url:"/_next/static/media/26a46d62cd723877-s.woff2",revision:"befd9c0fdfa3d8a645d5f95717ed6420"},{url:"/_next/static/media/55c55f0601d81cf3-s.woff2",revision:"43828e14271c77b87e3ed582dbff9f74"},{url:"/_next/static/media/581909926a08bbc8-s.woff2",revision:"f0b86e7c24f455280b8df606b89af891"},{url:"/_next/static/media/6d93bde91c0c2823-s.woff2",revision:"621a07228c8ccbfd647918f1021b4868"},{url:"/_next/static/media/97e0cb1ae144a2a9-s.woff2",revision:"e360c61c5bd8d90639fd4503c829c2dc"},{url:"/_next/static/media/a34f9d1faa5f3315-s.p.woff2",revision:"d4fe31e6a2aebc06b8d6e558c9141119"},{url:"/_next/static/media/df0a9ae256c0569c-s.woff2",revision:"d54db44de5ccb18886ece2fda72bdfe0"},{url:"/apple-icon-180.png",revision:"574c6aae414d4cd02a71299d8a2a8d04"},{url:"/apple-splash-1125-2436.jpg",revision:"f0cb8fb680148dc99d7d318c568cdaa9"},{url:"/apple-splash-1136-640.jpg",revision:"1eac85d1f2d1d73615e1c78d7becfd42"},{url:"/apple-splash-1170-2532.jpg",revision:"9763b871328e7345321cf58cb9338dd2"},{url:"/apple-splash-1179-2556.jpg",revision:"79e01c7a8567b06386b69ba7e2e708c0"},{url:"/apple-splash-1206-2622.jpg",revision:"3f276e4e8fe51e08e94d647944bc8fd0"},{url:"/apple-splash-1242-2208.jpg",revision:"b2939ef17a2cabc39539a044a114bf28"},{url:"/apple-splash-1242-2688.jpg",revision:"7a587fbaca8ecb12962d8d32fc43ef34"},{url:"/apple-splash-1284-2778.jpg",revision:"47055c13e3aa9e7520019b1fa2f90a4b"},{url:"/apple-splash-1290-2796.jpg",revision:"7b052f610989fdee19377f4b67b35119"},{url:"/apple-splash-1320-2868.jpg",revision:"ad74220e81f5fd096f201dbcb7097f73"},{url:"/apple-splash-1334-750.jpg",revision:"a87ef36f202b931ba6c3ac434febcb33"},{url:"/apple-splash-1488-2266.jpg",revision:"a863f7a3bd31abf207f3a937de8a5821"},{url:"/apple-splash-1536-2048.jpg",revision:"9cfe038fb03e725675ed7ad095d5074c"},{url:"/apple-splash-1620-2160.jpg",revision:"366d6f2a62ee61d2f7ac4a28bbc717b3"},{url:"/apple-splash-1640-2360.jpg",revision:"d10af5a273d742f4c726fe09fcdc0769"},{url:"/apple-splash-1668-2224.jpg",revision:"1649b9cd10dced7a0e43643e9ad7b7bd"},{url:"/apple-splash-1668-2388.jpg",revision:"532036c100f3c24945a501740e7e91e3"},{url:"/apple-splash-1792-828.jpg",revision:"f3406274764773f815ba7d0f659ae01d"},{url:"/apple-splash-2048-1536.jpg",revision:"542382164bbf17013371960ab8491e6b"},{url:"/apple-splash-2048-2732.jpg",revision:"8affd01ee0067ec6479c01d5012c260c"},{url:"/apple-splash-2160-1620.jpg",revision:"dfbeb3290012d7d0dda1e0933db4bdaa"},{url:"/apple-splash-2208-1242.jpg",revision:"5b046ba242f28b070e4d2f5bc46ebb5e"},{url:"/apple-splash-2224-1668.jpg",revision:"0db5164c887088f93b27eb266f190308"},{url:"/apple-splash-2266-1488.jpg",revision:"7047facb9905da1ca1518a53813293cc"},{url:"/apple-splash-2360-1640.jpg",revision:"6f775ac7a41fbbecfec58256921bd981"},{url:"/apple-splash-2388-1668.jpg",revision:"05fd5315b0ea0f263f74dd5271e2e0e3"},{url:"/apple-splash-2436-1125.jpg",revision:"7bccc3eadbaa03160a9f140045f2e3cd"},{url:"/apple-splash-2532-1170.jpg",revision:"561d366502aebe4b270ff2dd7ee2ff07"},{url:"/apple-splash-2556-1179.jpg",revision:"e25fd8a0e54c9bc8adf989e932e209f6"},{url:"/apple-splash-2622-1206.jpg",revision:"ee2a3cb2536b81b61af087a5cd65360b"},{url:"/apple-splash-2688-1242.jpg",revision:"8a91f8e5b2a59336941e6a4a47d5d4c1"},{url:"/apple-splash-2732-2048.jpg",revision:"64e43ca1bb036329a1853231cb5abd16"},{url:"/apple-splash-2778-1284.jpg",revision:"7dfdd49729d170d6d8f857fb7d2e4d28"},{url:"/apple-splash-2796-1290.jpg",revision:"0b6d07cc04500cfafd13d167242717ec"},{url:"/apple-splash-2868-1320.jpg",revision:"74c422a512a236f88ad658f917f1dcde"},{url:"/apple-splash-640-1136.jpg",revision:"13cf4584920d8a9e997ee036cc955fbe"},{url:"/apple-splash-750-1334.jpg",revision:"111b206232ea485bb7ee35837ede808c"},{url:"/apple-splash-828-1792.jpg",revision:"d160c9ad535d544f906767acd65bb292"},{url:"/badge.png",revision:"5d617bf8cf7108ea5521d3539500eb1c"},{url:"/favicon-196.png",revision:"54aacf4f6015de7f51b240b553ed3601"},{url:"/file.svg",revision:"d09f95206c3fa0bb9bd9fefabfd0ea71"},{url:"/globe.svg",revision:"2aaafa6a49b6563925fe440891e32717"},{url:"/icon.png",revision:"5d617bf8cf7108ea5521d3539500eb1c"},{url:"/manifest-icon-192.maskable.png",revision:"4187177f0502129b6e37a1798d5b9ae3"},{url:"/manifest-icon-512.maskable.png",revision:"56b21f477c8c839998ae1da4690578bd"},{url:"/manifest.json",revision:"b45c2dc7aa327a21b7101a6d0e1e1b43"},{url:"/next.svg",revision:"8e061864f388b47f33a1c3780831193e"},{url:"/vercel.svg",revision:"c0af2f507b369b085b35ef4bbe3bcf1e"},{url:"/web-app-manifest-192x192.png",revision:"03e28428ff9d9f01ef300a1ea2553ab1"},{url:"/web-app-manifest-512x512.png",revision:"32332b5e8c75c31005324eec6d107e0d"},{url:"/window.svg",revision:"a2760511c65806022ad20adf74370ff3"}],{ignoreURLParametersMatching:[]}),e.cleanupOutdatedCaches(),e.registerRoute("/",new e.NetworkFirst({cacheName:"start-url",plugins:[{cacheWillUpdate:async({request:e,response:a,event:s,state:i})=>a&&"opaqueredirect"===a.type?new Response(a.body,{status:200,statusText:"OK",headers:a.headers}):a}]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,new e.CacheFirst({cacheName:"google-fonts-webfonts",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:31536e3})]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:googleapis)\.com\/.*/i,new e.StaleWhileRevalidate({cacheName:"google-fonts-stylesheets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,new e.StaleWhileRevalidate({cacheName:"static-font-assets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,new e.StaleWhileRevalidate({cacheName:"static-image-assets",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/image\?url=.+$/i,new e.StaleWhileRevalidate({cacheName:"next-image",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:mp3|wav|ogg)$/i,new e.CacheFirst({cacheName:"static-audio-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:mp4)$/i,new e.CacheFirst({cacheName:"static-video-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:js)$/i,new e.StaleWhileRevalidate({cacheName:"static-js-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:css|less)$/i,new e.StaleWhileRevalidate({cacheName:"static-style-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/data\/.+\/.+\.json$/i,new e.StaleWhileRevalidate({cacheName:"next-data",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:json|xml|csv)$/i,new e.NetworkFirst({cacheName:"static-data-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;const a=e.pathname;return!a.startsWith("/api/auth/")&&!!a.startsWith("/api/")}),new e.NetworkFirst({cacheName:"apis",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:16,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;return!e.pathname.startsWith("/api/")}),new e.NetworkFirst({cacheName:"others",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>!(self.origin===e.origin)),new e.NetworkFirst({cacheName:"cross-origin",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:3600})]}),"GET")}));
+/* eslint-disable @typescript-eslint/no-unused-vars */
+const CACHE_NAME = 'welcome-book-v1';
+const API_CACHE_NAME = 'api-cache-v1';
+const ASSETS = [
+  '/',
+  '/_next/static/css/',
+  '/_next/static/media/',
+  '/_next/static/chunks/',
+  '/_next/static/',
+  '/manifest.json',
+];
+
+// This is the "Offline page" service worker
+
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
+const CACHE = "pwabuilder-page";
+
+// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
+const offlineFallbackPage = "/~offline";
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
+
+self.addEventListener('install', async (event) => {
+  event.waitUntil(
+    caches.open(CACHE)
+      .then((cache) => cache.add(offlineFallbackPage))
+  );
+});
+
+if (workbox.navigationPreload.isSupported()) {
+  workbox.navigationPreload.enable();
+}
+
+self.addEventListener('fetch', (event) => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith((async () => {
+      try {
+        const preloadResp = await event.preloadResponse;
+
+        if (preloadResp) {
+          return preloadResp;
+        }
+
+        const networkResp = await fetch(event.request);
+        return networkResp;
+      } catch (error) {
+
+        const cache = await caches.open(CACHE);
+        const cachedResp = await cache.match(offlineFallbackPage);
+        return cachedResp;
+      }
+    })());
+  }
+});
+
+// Push Notification
+self.addEventListener('push', function (event) {
+  if (event.data) {
+    const data = event.data.json()
+    const options = {
+      body: data.body,
+      icon: data.icon || '/icon.png',
+      badge: '/badge.png',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: '2',
+      },
+    }
+    event.waitUntil(self.registration.showNotification(data.title, options))
+  }
+})
+ 
+self.addEventListener('notificationclick', function (event) {
+  console.log('Notification click received.')
+  event.notification.close()
+  event.waitUntil(clients.openWindow('https://cloneth.vercel.app'))
+})
+
+// Install Event
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
+  );
+});
+
+// Activate Event
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => 
+      Promise.all(keys.map((key) => {
+        if (key !== CACHE_NAME && key !== API_CACHE_NAME) {
+          return caches.delete(key);
+        }
+      }))
+    )
+  );
+});
+
+// Fetch Event (Özel WiFi API Cache Stratejisi)
+self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+  
+  // API İsteklerini Özel Yönet
+  if (url.pathname === '/api/wifi') {
+    event.respondWith(
+      caches.open(API_CACHE_NAME).then(async (cache) => {
+        try {
+          const networkResponse = await fetch(event.request);
+          cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        } catch (err) {
+          const cachedResponse = await cache.match(event.request);
+          return cachedResponse || Response.json({ error: 'Offline' });
+        }
+      })
+    );
+  }
+
+  // Diğer İstekler
+  else {
+    event.respondWith(
+      caches.match(event.request).then((response) => 
+        response || fetch(event.request)
+      )
+    );
+  }
+});
+
+
+  // Message Event Handler
+self.addEventListener('message', (event) => {
+    if (event.data.type === 'UPDATE_WIFI') {
+      caches.open(API_CACHE_NAME).then((cache) => {
+        const response = new Response(JSON.stringify(event.data.payload), {
+          headers: { 'Content-Type': 'application/json' },
+        });
+        cache.put(new Request('/api/wifi'), response);
+        
+        // Tüm istemcilere bildirim gönder
+        self.clients.matchAll().then((clients) => {
+          clients.forEach((client) => {
+            client.postMessage({
+              type: 'WIFI_UPDATED',
+              payload: event.data.payload,
+            });
+            });
+          });
+        });
+    }
+});
