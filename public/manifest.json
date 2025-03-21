@@ -1,4 +1,5 @@
 {
+  "protocol_handlers": [{"protocol":"mailto","url":"/newEmail?to=%s"}], 
   "id": "/cloneth-dgsf56dg",
   "dir": "ltr",
   "lang": "en",
